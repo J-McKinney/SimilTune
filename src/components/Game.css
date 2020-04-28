@@ -1,0 +1,182 @@
+#speechWrapper {
+  background-image: linear-gradient(to bottom, #16252c, #2d3a41);
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#exitContainer {
+  margin: 0 0 0 auto;
+  padding: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#exitButton {
+  float: right;
+  /* margin: 0 0 0 0; */
+  padding: 0.5% 0.5% 0 0.5%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#X {
+  width: fit-content;
+  height: fit-content;
+  font-weight: bold;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordContainer {
+  text-align: center;
+  justify-content: center;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordRow {
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordCol {
+  text-align: center;
+  justify-content: center;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordPlacement {
+  font-family: "Bangers", cursive;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 3.6rem;
+  margin: 3% 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordButtonRow {
+  margin: 2% 0 1% 0;
+  text-align: center;
+  justify-content: center;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordButton {
+  color: #000000;
+  background-color: #d5d7d6;
+  border-color: #d5d7d6;
+  text-align: center;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#newWordText {
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#oscilloscopeRow {
+  text-align: center !important;
+  justify-content: center !important;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+.oscilloscope {
+  border-radius: 25px;
+  width: 100%;
+  height: 50%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#audio-playback-controls {
+  text-align: center !important;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#finalTranscriptContainer {
+  text-align: center;
+  justify-content: center;
+  /* background-image: linear-gradient(to bottom, #212f36, #2c3940); */
+  height: 100px;
+  width: 100%;
+  overflow: auto;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#interimTranscript {
+  color: white;
+  font-weight: bold;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#finalTranscript {
+  color: white;
+  font-weight: bold;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#buttonContainer {
+  text-align: center;
+  justify-content: center;
+  margin: 1% 0 1% 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#buttonRow {
+  text-align: center;
+  justify-content: center;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#favIcon {
+  font-size: 2.6rem;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#recordButton {
+  color: white;
+  background-color: #bf544f;
+  border-color: #bf544f;
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  margin: 0 0 1.5% 0;
+  width: 100%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#resetButton {
+  color: white;
+  background-color: #0c7d86;
+  border-color: #53725e;
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  margin: 0 0 1.5% 0;
+  width: 100%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#submitButton {
+  color: white;
+  background-color: #1ae69d;
+  border-color: #778989;
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  margin: 0 0 1.5% 0;
+  width: 100%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
