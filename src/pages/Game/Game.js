@@ -221,6 +221,7 @@ class Game extends Component {
               </Col>
             </Row>
           </Container>
+
         </div>
       </>
     );
