@@ -1,0 +1,177 @@
+#landingWrapper {
+  background-image: linear-gradient(to bottom, #16252c, #2d3a41);
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#titleContainer {
+  text-align: center;
+  justify-content: center;
+  /* width: 100%; */
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
+  height: fit-content;
+}
+
+#titleRow {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 0 0 0 0;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#titleCol {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  /* padding: 0 0 0 0; */
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#title {
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2% 0 2% 0;
+  height: fit-content;
+  font-family: "Cantora One", sans-serif;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#iTunesNote {
+  color: #bf544f;
+}
+
+h1 {
+  font-size: 4.8rem;
+  color: #00f0ff;
+}
+
+#infoContainer {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 0% 2% 0% 2%;
+  padding: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#infoRow {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  padding: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsCol {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsButton {
+  font-family: "Bangers", cursive;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #101f3e;
+  margin: 2% 0 2% 0;
+  background-color: #0c7d86;
+  border-color: #53725e;
+  width: 90%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseCol {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseButton {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #101f3e;
+  margin: 2% 0 2% 0;
+  background-color: #0c7d86;
+  border-color: #53725e;
+  width: 90%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#startContainer {
+  padding: 0 0 0 0;
+  height: fit-content;
+  margin: 0 0 2% 0;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#startRow {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  padding: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#startCol {
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px rgb(0, 0, 0); */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#startButton {
+  font-family: "Bangers", cursive;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2% 0 2% 0;
+  color: #101f3e;
+  background-color: #1ae69d;
+  border-color: #1ae69d;
+  border-radius: 15px;
+  /* height: 100%; */
+  box-shadow: 7px 7px 7px rgb(10, 101, 107);
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+h2 {
+  font-size: 2rem;
+  color: black;
+}

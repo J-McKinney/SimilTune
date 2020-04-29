@@ -1,0 +1,47 @@
+#errorWrapper {
+  background-color: rgb(47, 47, 255);
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#eCon {
+  /* padding: 1% 1% 1% 1%; */
+  /* margin: 0 1% 0 1%; */
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#eRow {
+  padding: 1% 1% 1% 1%;
+  margin: 0 1% 0 1%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#eCol {
+  padding: 1% 1% 1% 1%;
+  margin: 0 1% 0 1%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#eh1 {
+  color: white;
+  font-size: 2rem;
+}
+
+#eh2 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#eHomeButton {
+    background-color: red;
+    font-weight: bold;
+}

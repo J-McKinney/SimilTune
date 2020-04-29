@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -155,6 +156,13 @@ class Game extends Component {
     return (
       <>
         <div id="speechWrapper">
+          <Container id="exitContainer">
+            <Link to="/">
+              <Button id="exitButton">
+                <h6 id="X">X</h6>
+              </Button>
+            </Link>
+          </Container>
           <Container id="randomWordContainer">
             <Row id="randomWordRow">
               <Col id="randomWordCol">
