@@ -77,6 +77,7 @@ class Game extends Component {
     axios
       .get(CORS + MUSIX_API_URL)
       .then((response) => {
+        console.log(response)
         console.log(response.data.message.body.track_list[0].track.track_name);
         console.log(response.data.message.body.track_list[0].track.artist_name);
         console.log(response.data.message.body.track_list[0].track.album_name);
