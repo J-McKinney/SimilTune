@@ -23,7 +23,6 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
-// const REACT_APP_MM_KEY = "";
 let randomWordArr = ["Incredible"];
 
 class Game extends Component {
@@ -73,11 +72,10 @@ class Game extends Component {
       // changing &page=1 to any other number will add more info to single tracks on the json list
       "&page_size=1&page=1&s_track_rating=desc&apikey=" +
       process.env.REACT_APP_MM_KEY;
-
     axios
       .get(CORS + MUSIX_API_URL)
       .then((response) => {
-        console.log(response)
+        console.log(response);
         console.log(response.data.message.body.track_list[0].track.track_name);
         console.log(response.data.message.body.track_list[0].track.artist_name);
         console.log(response.data.message.body.track_list[0].track.album_name);
@@ -176,7 +174,6 @@ class Game extends Component {
               </Col>
             </Row>
           </Container>
-
           <Container>
             <Row id="randomWordButtonRow">
               {/* change onClick laptop/desktop to onTouchStart mobile */}
@@ -185,7 +182,6 @@ class Game extends Component {
               </Button>
             </Row>
           </Container>
-
           <Container id="finalTranscriptContainer">
             <div id="interimTranscript"></div>
             <div
@@ -196,7 +192,6 @@ class Game extends Component {
               <br />
             </div>
           </Container>
-
           <Container id="buttonContainer">
             <Row id="buttonRow">
               <Col>
