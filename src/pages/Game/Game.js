@@ -12,9 +12,6 @@ var SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioContext = new AudioContext();
-
 recognition.continous = true;
 recognition.maxAlternatives = 10;
 recognition.interimResults = true;
@@ -45,10 +42,10 @@ class Game extends Component {
   }
   componentDidMount() {
     recognition.stop();
-    audioContext.resume();
+    // audioContext.resume();
   }
   componentDidUpdate() {
-    audioContext.resume();
+    // audioContext.resume();
   }
 
   handleChange = (event) => {

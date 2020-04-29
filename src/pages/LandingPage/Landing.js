@@ -18,7 +18,7 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    audioContext.resume();
+    console.log();
   }
   componentDidUpdate() {
     audioContext.resume();
@@ -45,7 +45,6 @@ class Landing extends Component {
               </Col>
             </Row>
           </Container>
-
           <Container id="infoContainer">
             <Row id="infoRow">
               <Col id="instructionsCol">
@@ -60,7 +59,6 @@ class Landing extends Component {
               </Col>
             </Row>
           </Container>
-
           <Container id="startContainer">
             <Row id="startRow">
               <Col id="startCol">
