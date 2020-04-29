@@ -4,7 +4,7 @@ import Landing from "./pages/LandingPage/Landing";
 // import Gameplay from "./pages/Gameplay/Gameplay";
 import Instructions from "./pages/Instructions/Instructions";
 import License from "./pages/License/License";
-import Game from "./components/Game";
+import Game from "./pages/Game/Game";
 import ErrorPage from "./pages/ErrorPage/Error";
 import "./App.css";
 require("dotenv").config();

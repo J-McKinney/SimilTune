@@ -209,6 +209,7 @@ class Game extends Component {
                 <Button
                   id="submitButton"
                   type="submit"
+                  disabled={!this.state.lyrics}
                   value={this.state.sentence}
                   onClick={this.handleSubmit}
                 >
