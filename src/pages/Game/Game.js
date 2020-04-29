@@ -12,6 +12,9 @@ var SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var audioContext = new AudioContext();
+
 recognition.continous = true;
 recognition.maxAlternatives = 10;
 recognition.interimResults = true;
@@ -20,7 +23,7 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
-const APIKEY = "03b6aef760aae79c400fed78ed0398f8";
+const APIKEY = "";
 let randomWordArr = ["Incredible"];
 
 class Game extends Component {
@@ -43,10 +46,10 @@ class Game extends Component {
   }
   componentDidMount() {
     recognition.stop();
+    audioContext.resume();
   }
   componentDidUpdate() {
-    // console.log(this.state.sentence);
-    // console.log(this.state.lyrics);
+    audioContext.resume();
   }
 
   handleChange = (event) => {

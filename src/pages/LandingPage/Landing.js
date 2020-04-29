@@ -6,33 +6,6 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./Landing.css";
 
-// var context;
-
-// window.onload = function () {
-//   context = new AudioContext();
-//   // Setup all nodes
-//   console.log(context.state);
-// };
-
-// if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-//   console.log("getUserMedia supported.");
-//   navigator.mediaDevices
-//     .getUserMedia(
-//       // constraints - only audio needed for this app
-//       {
-//         audio: true,
-//       }
-//     )
-//     // Success callback
-//     .then(function (stream) {})
-//     // Error callback
-//     .catch(function (err) {
-//       console.log("The following getUserMedia error occured: " + err);
-//     });
-// } else {
-//   console.log("getUserMedia not supported on your browser!");
-// }
-
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext = new AudioContext();
 
@@ -45,11 +18,10 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    // console.log(audioContext);
+    audioContext.resume();
   }
   componentDidUpdate() {
     audioContext.resume();
-    // console.log(context);
   }
 
   Listening = () => {
@@ -57,9 +29,6 @@ class Landing extends Component {
       audioContext = new AudioContext();
     }
     audioContext.resume();
-    // context.resume().then(() => {
-    console.log("Playback resumed successfully");
-    // });
   };
 
   render() {
