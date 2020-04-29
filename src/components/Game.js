@@ -19,7 +19,7 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
-const APIKEY = "";
+const APIKEY = "03b6aef760aae79c400fed78ed0398f8";
 let randomWordArr = ["Incredible"];
 
 class Game extends Component {
@@ -39,6 +39,9 @@ class Game extends Component {
     this.toggleListen = this.toggleListen.bind(this);
     this.handleListen = this.handleListen.bind(this);
     this.randomWordGenerator = this.randomWordGenerator.bind(this);
+  }
+  componentDidMount() {
+    recognition.stop();
   }
   componentDidUpdate() {
     // console.log(this.state.sentence);
@@ -144,7 +147,6 @@ class Game extends Component {
     event.preventDefault();
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
-    // console.log(word);
     document.getElementById("randomWordPlacement").innerHTML = word;
   }
 
@@ -187,12 +189,12 @@ class Game extends Component {
             <Row id="buttonRow">
               <Col>
                 <Button id="recordButton" onClick={this.toggleListen}>
-                  <i id="favIcon" className="far fa-stop-circle"></i>
+                  <i id="favIcon" className="far fa-stop-circle" />
                 </Button>
               </Col>
               <Col>
                 <Button id="resetButton" onClick={this.resetTranscripts}>
-                  <i id="favIcon" className="fas fa-undo"></i>
+                  <i id="favIcon" className="fas fa-undo" />
                 </Button>
               </Col>
               <Col>
@@ -202,7 +204,7 @@ class Game extends Component {
                   value={this.state.sentence}
                   onClick={this.handleSubmit}
                 >
-                  <i id="favIcon" className="far fa-thumbs-up"></i>
+                  <i id="favIcon" className="far fa-thumbs-up" />
                 </Button>
               </Col>
             </Row>
