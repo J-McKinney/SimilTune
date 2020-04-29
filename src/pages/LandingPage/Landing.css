@@ -104,7 +104,12 @@ h1 {
   background-color: #0c7d86;
   border-color: #53725e;
   width: 90%;
+  box-shadow: 7px 7px 7px rgb(10, 101, 107);
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsButton:active {
+  transform: translateY(4px);
 }
 
 #licenseCol {
@@ -126,7 +131,12 @@ h1 {
   background-color: #0c7d86;
   border-color: #53725e;
   width: 90%;
+  box-shadow: 7px 7px 7px rgb(10, 101, 107);
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseButton:active {
+  transform: translateY(3px);
 }
 
 #startContainer {
@@ -169,6 +179,10 @@ h1 {
   /* height: 100%; */
   box-shadow: 7px 7px 7px rgb(10, 101, 107);
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#startButton:active {
+  transform: translateY(3px);
 }
 
 h2 {

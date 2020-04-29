@@ -26,6 +26,10 @@
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
+#exitButton:active {
+  transform: translateY(3px);
+}
+
 #X {
   width: fit-content;
   height: fit-content;
@@ -79,6 +83,10 @@
   border-radius: 15px;
   box-shadow: 7px 7px 7px rgb(0, 0, 0);
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordButton:active {
+  transform: translateY(3px);
 }
 
 #newWordText {
@@ -157,6 +165,10 @@
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
+#recordButton:active {
+  transform: translateY(3px);
+}
+
 #resetButton {
   color: white;
   background-color: #0c7d86;
@@ -169,6 +181,10 @@
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
+#resetButton:active {
+  transform: translateY(3px);
+}
+
 #submitButton {
   color: white;
   background-color: #1ae69d;
@@ -179,4 +195,8 @@
   margin: 0 0 1.5% 0;
   width: 100%;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#submitButton:active {
+  transform: translateY(3px);
 }

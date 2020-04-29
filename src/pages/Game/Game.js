@@ -23,7 +23,7 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
-const APIKEY = "";
+// const REACT_APP_MM_KEY = "";
 let randomWordArr = ["Incredible"];
 
 class Game extends Component {
@@ -72,7 +72,7 @@ class Game extends Component {
       // changing the &page_size=1 to any other number will add other tracks to the json list
       // changing &page=1 to any other number will add more info to single tracks on the json list
       "&page_size=1&page=1&s_track_rating=desc&apikey=" +
-      APIKEY;
+      process.env.REACT_APP_MM_KEY;
 
     axios
       .get(CORS + MUSIX_API_URL)
