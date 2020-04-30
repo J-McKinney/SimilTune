@@ -1,0 +1,21 @@
+#multiplayerWrapper {
+  background-image: linear-gradient(to bottom, #16252c, #2d3a41);
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  box-sizing: border-box;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#multiplayerTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Bangers", cursive;
+}
