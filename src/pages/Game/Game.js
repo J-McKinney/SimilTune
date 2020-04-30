@@ -58,86 +58,6 @@ class Game extends Component {
     });
   };
 
-  // working on chained promises
-  
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   const MUSIX_API_ARTIST_INFO =
-  //     MUSIX_API_ROOT +
-  //     "track.search?q_lyrics=" +
-  //     this.state.format +
-  //     // changing the &page_size=1 to any other number will add other tracks to the json list
-  //     // changing &page=1 to any other number will add more info to single tracks on the json list
-  //     "&page_size=1&page=1&s_track_rating=desc&apikey=" +
-  //     process.env.REACT_APP_MM_KEY;
-  //   axios
-  //     .get(CORS + MUSIX_API_ARTIST_INFO)
-  //     .then((response) => {
-  //       console.log(response)
-  //       // this.setState({
-  //       //   track: response.data.message.body.track_list[0].track.track_name,
-  //       //   artist: response.data.message.body.track_list[0].track.artist_name,
-  //       //   album: response.data.message.body.track_list[0].track.album_name,
-  //       //   url: response.data.message.body.track_list[0].track.track_share_url,
-  //       //   trackID: response.data.message.body.track_list[0].track.track_id,
-  //       // });
-  //       const MUSIX_API_SONG_LYRICS =
-  //         MUSIX_API_ROOT +
-  //         "track.lyrics.get?track_id=" +
-  //         this.state.trackID +
-  //         "&apikey=" +
-  //         process.env.REACT_APP_MM_KEY;
-  //       return axios.get(CORS + MUSIX_API_SONG_LYRICS);
-  //     })
-  //     .then((response) => {
-  //       console.log(response);
-  //       // this.setState({
-  //       //   songLyrics: response.data.message.body.lyrics.lyrics_body,
-  //       // });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.setState({
-      lyrics: "",
-    });
-    const MUSIX_API_URL =
-      MUSIX_API_ROOT +
-      "track.search?q_lyrics=" +
-      this.state.lyrics +
-      // changing the &page_size=1 to any other number will add other tracks to the json list
-      // changing &page=1 to any other number will add more info to single tracks on the json list
-      "&page_size=1&page=1&s_track_rating=desc&apikey=" +
-      process.env.REACT_APP_MM_KEY;
-    axios
-      .get(CORS + MUSIX_API_URL)
-      .then((response) => {
-        console.log(response);
-        console.log(response.data.message.body.track_list[0].track.track_name);
-        console.log(response.data.message.body.track_list[0].track.artist_name);
-        console.log(response.data.message.body.track_list[0].track.album_name);
-        console.log(
-          response.data.message.body.track_list[0].track.track_share_url
-        );
-        this.setState({
-          track: response.data.message.body.track_list[0].track.track_name,
-          artist: response.data.message.body.track_list[0].track.artist_name,
-          album: response.data.message.body.track_list[0].track.album_name,
-          url: response.data.message.body.track_list[0].track.track_share_url,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    // document.getElementById("trackName").innerHTML = this.state.track;
-    // document.getElementById("artistName").innerHTML = this.state.artist;
-    // document.getElementById("albumName").innerHTML = this.state.album;
-  }
-
   toggleListen = () => {
     this.setState(
       {
@@ -180,6 +100,48 @@ class Game extends Component {
       console.log("Error occurred in recognition: " + event.error);
     };
   };
+
+  // working on chained promises
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const MUSIX_API_ARTIST_INFO =
+      MUSIX_API_ROOT +
+      "track.search?q_lyrics=" +
+      this.state.lyrics +
+      // changing the &page_size=1 to any other number will add other tracks to the json list
+      // changing &page=1 to any other number will add more info to single tracks on the json list
+      "&page_size=1&page=1&s_track_rating=desc&apikey=" +
+      process.env.REACT_APP_MM_KEY;
+    axios
+      .get(CORS + MUSIX_API_ARTIST_INFO)
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          track: response.data.message.body.track_list[0].track.track_name,
+          artist: response.data.message.body.track_list[0].track.artist_name,
+          album: response.data.message.body.track_list[0].track.album_name,
+          url: response.data.message.body.track_list[0].track.track_share_url,
+          trackID: response.data.message.body.track_list[0].track.track_id,
+        });
+        const MUSIX_API_SONG_LYRICS =
+          MUSIX_API_ROOT +
+          "track.lyrics.get?track_id=" +
+          this.state.trackID +
+          "&apikey=" +
+          process.env.REACT_APP_MM_KEY;
+        return axios.get(CORS + MUSIX_API_SONG_LYRICS);
+      })
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          songLyrics: response.data.message.body.lyrics.lyrics_body,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   resetTranscripts() {
     document.getElementById("interimTranscript").innerHTML = interimTranscript =
