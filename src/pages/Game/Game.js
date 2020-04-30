@@ -102,6 +102,9 @@ class Game extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // this.setState({
+    //   lyrics: "",
+    // });
     const MUSIX_API_ARTIST_INFO =
       MUSIX_API_ROOT +
       "track.search?q_lyrics=" +
