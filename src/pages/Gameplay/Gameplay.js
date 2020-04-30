@@ -22,8 +22,8 @@ class Gameplay extends Component {
           <Container>
             <Row>
               <Col>
-                <Link to="/">
-                  <Button>Home</Button>
+                <Link to="/game">
+                  <Button>Start The Game</Button>
                 </Link>
               </Col>
             </Row>
