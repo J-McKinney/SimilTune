@@ -159,7 +159,6 @@ class Game extends Component {
     return (
       <>
         <div id="speechWrapper">
-
           <Container fluid id="exitContainer">
             <div id="timer">00:00</div>
             <Link to="/">

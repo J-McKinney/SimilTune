@@ -18,12 +18,16 @@ class Gameplay extends Component {
               </Col>
             </Row>
           </Container>
-
           <Container>
             <Row>
               <Col>
-                <Link to="/game">
-                  <Button>Start The Game</Button>
+                <Link to="/singleplayer">
+                  <Button>Single Player Game</Button>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/multiplayer">
+                  <Button>Multi-Player Game</Button>
                 </Link>
               </Col>
             </Row>

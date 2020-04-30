@@ -61,7 +61,7 @@ class Landing extends Component {
           <Container id="startContainer">
             <Row id="startRow">
               <Col id="startCol">
-                <Link to="/singleplayer">
+                <Link to="/gameplay">
                   <Button id="startButton" onClick={this.Listening}>
                     <h2>
                       <i id="iTunesNote" className="fab fa-itunes-note"></i>
