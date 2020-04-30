@@ -165,7 +165,7 @@ class Game extends Component {
           <Container id="exitContainer">
             <Link to="/">
               <Button id="exitButton">
-                <h6 id="X">X</h6>
+                <h6 id="close">&times;</h6>
               </Button>
             </Link>
           </Container>
