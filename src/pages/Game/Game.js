@@ -40,7 +40,7 @@ class Game extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleListen = this.toggleListen.bind(this);
     this.handleListen = this.handleListen.bind(this);
-    this.randomWordGenerator = this.randomWordGenerator.bind(this);
+    this.randomWordStartTimer = this.randomWordStartTimer.bind(this);
   }
   componentDidMount() {
     recognition.stop();
@@ -150,7 +150,7 @@ class Game extends Component {
     document.getElementById("finalTranscript").innerHTML = finalTranscript = "";
   }
 
-  randomWordGenerator(e) {
+  randomWordStartTimer(e) {
     e.preventDefault();
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
@@ -162,7 +162,9 @@ class Game extends Component {
     return (
       <>
         <div id="speechWrapper">
-          <Container id="exitContainer">
+
+          <Container fluid id="exitContainer">
+            <div id="timer">00:00</div>
             <Link to="/">
               <Button id="exitButton" className="rounded-right">
                 <h6 id="close">&times;</h6>
@@ -182,8 +184,8 @@ class Game extends Component {
           <Container>
             <Row id="randomWordButtonRow">
               {/* change onClick laptop/desktop to onTouchStart mobile */}
-              <Button id="randomWordButton" onClick={this.randomWordGenerator}>
-                <div id="newWordText">NewWord/Timer</div>
+              <Button id="randomWordButton" onClick={this.randomWordStartTimer}>
+                <div id="newWordText">New Word / Start Timer</div>
               </Button>
             </Row>
           </Container>
