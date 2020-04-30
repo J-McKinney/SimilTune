@@ -41,7 +41,6 @@ class Landing extends Component {
                 <div id="title">
                   <h1>SimilTune</h1>
                 </div>
-                {/*<h1 id="title"><Fade>SimilTune</Fade></h1>*/}
               </Col>
             </Row>
           </Container>
