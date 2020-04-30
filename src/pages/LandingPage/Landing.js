@@ -18,7 +18,7 @@ class Landing extends Component {
   }
 
   componentDidMount() {
-    console.log();
+    // console.log();
   }
   componentDidUpdate() {
     audioContext.resume();
@@ -61,7 +61,7 @@ class Landing extends Component {
           <Container id="startContainer">
             <Row id="startRow">
               <Col id="startCol">
-                <Link to="/gameplay">
+                <Link to="/singleplayer">
                   <Button id="startButton" onClick={this.Listening}>
                     <h2>
                       <i id="iTunesNote" className="fab fa-itunes-note"></i>

@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import "./Game.css";
+import "./SinglePlayer.css";
 require("dotenv").config();
 
 var SpeechRecognition =
@@ -20,7 +20,7 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
-let randomWordArr = ["Incredible"];
+let randomWordArr = ["Love"];
 
 class Game extends Component {
   constructor(props) {
