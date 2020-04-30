@@ -44,10 +44,9 @@ class Game extends Component {
   }
   componentDidMount() {
     recognition.stop();
-    // audioContext.resume();
   }
   componentDidUpdate() {
-    // audioContext.resume();
+    console.log();
   }
 
   handleChange = (event) => {
@@ -101,8 +100,6 @@ class Game extends Component {
     };
   };
 
-  // working on chained promises
-
   handleSubmit(e) {
     e.preventDefault();
     const MUSIX_API_ARTIST_INFO =
@@ -143,14 +140,15 @@ class Game extends Component {
       });
   }
 
-  resetTranscripts() {
+  resetTranscripts(e) {
+    e.preventDefault();
     document.getElementById("interimTranscript").innerHTML = interimTranscript =
       "";
     document.getElementById("finalTranscript").innerHTML = finalTranscript = "";
   }
 
-  randomWordGenerator(event) {
-    event.preventDefault();
+  randomWordGenerator(e) {
+    e.preventDefault();
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
