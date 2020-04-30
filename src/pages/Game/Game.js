@@ -164,11 +164,12 @@ class Game extends Component {
         <div id="speechWrapper">
           <Container id="exitContainer">
             <Link to="/">
-              <Button id="exitButton">
+              <Button id="exitButton" className="rounded-right">
                 <h6 id="close">&times;</h6>
               </Button>
             </Link>
           </Container>
+
           <Container id="randomWordContainer">
             <Row id="randomWordRow">
               <Col id="randomWordCol">
