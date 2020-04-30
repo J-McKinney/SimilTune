@@ -152,6 +152,10 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
+    // var timer = 30;
+    setTimeout(function () {
+      console.log("hi");
+    }, 1000);
   }
 
   render() {
