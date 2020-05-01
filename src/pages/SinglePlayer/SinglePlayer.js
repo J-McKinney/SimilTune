@@ -152,10 +152,6 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
-    // var timer = 30;
-    setTimeout(function () {
-      console.log("hi");
-    }, 1000);
   }
 
   render() {
@@ -164,7 +160,7 @@ class Game extends Component {
       <>
         <div id="speechWrapper">
           <Container fluid id="exitContainer">
-            <div id="timer">00:00</div>
+            <div id="timer">{this.timer}</div>
             <Link to="/">
               <Button id="exitButton" className="rounded-right">
                 <h6 id="close">&times;</h6>
