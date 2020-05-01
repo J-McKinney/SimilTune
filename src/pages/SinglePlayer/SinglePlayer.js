@@ -46,6 +46,7 @@ class Game extends Component {
   }
   componentDidMount() {
     recognition.stop();
+    this.startTimer();
   }
   componentDidUpdate() {}
   componentWillUnmount() {
@@ -141,8 +142,6 @@ class Game extends Component {
       .catch((error) => {
         console.log(error);
       });
-    this.stopTimer();
-    this.resetTimer();
   }
 
   resetTranscripts(e) {
@@ -157,7 +156,6 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
-    this.startTimer();
   }
 
   startTimer() {
