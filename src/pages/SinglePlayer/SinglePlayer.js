@@ -34,6 +34,8 @@ class Game extends Component {
       url: "",
       trackID: "",
       songLyrics: "",
+      minutes: 3,
+      seconds: 0,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -45,8 +47,9 @@ class Game extends Component {
   componentDidMount() {
     recognition.stop();
   }
-  componentDidUpdate() {
-    console.log();
+  componentDidUpdate() {}
+  componentWillUnmount() {
+    this.stopTimer();
   }
 
   handleChange = (event) => {
@@ -138,6 +141,8 @@ class Game extends Component {
       .catch((error) => {
         console.log(error);
       });
+    this.stopTimer();
+    this.resetTimer();
   }
 
   resetTranscripts(e) {
@@ -152,15 +157,49 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
+    this.startTimer();
+  }
+
+  startTimer() {
+    this.myInterval = setInterval(() => {
+      const { seconds, minutes } = this.state;
+      if (seconds > 0) {
+        this.setState(({ seconds }) => ({
+          seconds: seconds - 1,
+        }));
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          clearInterval(this.myInterval);
+        } else {
+          this.setState(({ minutes }) => ({
+            minutes: minutes - 1,
+            seconds: 59,
+          }));
+        }
+      }
+    }, 1000);
+  }
+
+  stopTimer() {
+    clearInterval(this.myInterval);
   }
 
   render() {
-    // const { track, artist, album, url } = this.state;
+    const { minutes, seconds } = this.state;
     return (
       <>
         <div id="speechWrapper">
           <Container fluid id="exitContainer">
-            <div id="timer">{this.timer}</div>
+            <div id="timer">
+              {minutes === 0 && seconds === 0 ? (
+                <div id="timer">Time's Up!</div>
+              ) : (
+                <div id="timer">
+                  {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+                </div>
+              )}
+            </div>
             <Link to="/">
               <Button id="exitButton" className="rounded-right">
                 <h6 id="close">&times;</h6>
