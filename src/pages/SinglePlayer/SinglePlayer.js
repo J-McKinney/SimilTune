@@ -34,6 +34,7 @@ class Game extends Component {
       url: "",
       trackID: "",
       songLyrics: "",
+      clockRunning: false,
       minutes: 3,
       seconds: 0,
     };
@@ -47,10 +48,13 @@ class Game extends Component {
   componentDidMount() {
     recognition.stop();
     this.startTimer();
+    this.setState({ clockRunning: true });
   }
+
   componentDidUpdate() {}
+
   componentWillUnmount() {
-    this.stopTimer();
+    // this.stopTimer();
   }
 
   handleChange = (event) => {
@@ -102,6 +106,7 @@ class Game extends Component {
       event.preventDefault();
       console.log("Error occurred in recognition: " + event.error);
     };
+    // console.log(this.state.sentence);
   };
 
   handleSubmit(e) {
@@ -117,7 +122,7 @@ class Game extends Component {
     axios
       .get(CORS + MUSIX_API_ARTIST_INFO)
       .then((response) => {
-        console.log(response);
+        // console.log(response.data.message.header.available);
         this.setState({
           track: response.data.message.body.track_list[0].track.track_name,
           artist: response.data.message.body.track_list[0].track.artist_name,
@@ -134,10 +139,10 @@ class Game extends Component {
         return axios.get(CORS + MUSIX_API_SONG_LYRICS);
       })
       .then((response) => {
-        console.log(response);
         this.setState({
           songLyrics: response.data.message.body.lyrics.lyrics_body,
         });
+        console.log(this.state.songLyrics)
       })
       .catch((error) => {
         console.log(error);
@@ -168,6 +173,7 @@ class Game extends Component {
       }
       if (seconds === 0) {
         if (minutes === 0) {
+          this.setState({ clockRunning: false });
           clearInterval(this.myInterval);
         } else {
           this.setState(({ minutes }) => ({
@@ -217,7 +223,11 @@ class Game extends Component {
           <Container>
             <Row id="randomWordButtonRow">
               {/* change onClick laptop/desktop to onTouchStart mobile */}
-              <Button id="randomWordButton" onClick={this.randomWordStartTimer}>
+              <Button
+                id="randomWordButton"
+                disabled={!this.state.clockRunning}
+                onClick={this.randomWordStartTimer}
+              >
                 <div id="newWordText">New Word / Start Timer</div>
               </Button>
             </Row>
@@ -235,12 +245,20 @@ class Game extends Component {
           <Container id="buttonContainer">
             <Row id="buttonRow">
               <Col>
-                <Button id="recordButton" onClick={this.toggleListen}>
+                <Button
+                  id="recordButton"
+                  disabled={!this.state.clockRunning}
+                  onClick={this.toggleListen}
+                >
                   <i id="favIcon" className="far fa-stop-circle" />
                 </Button>
               </Col>
               <Col>
-                <Button id="resetButton" onClick={this.resetTranscripts}>
+                <Button
+                  id="resetButton"
+                  disabled={!this.state.clockRunning}
+                  onClick={this.resetTranscripts}
+                >
                   <i id="favIcon" className="fas fa-undo" />
                 </Button>
               </Col>
