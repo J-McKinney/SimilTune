@@ -33,9 +33,10 @@ class Game extends Component {
       album: "",
       url: "",
       trackID: "",
+      availableTracks: "",
       songLyrics: "",
       clockRunning: false,
-      minutes: 3,
+      minutes: 20,
       seconds: 0,
     };
 
@@ -43,7 +44,7 @@ class Game extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleListen = this.toggleListen.bind(this);
     this.handleListen = this.handleListen.bind(this);
-    this.randomWordStartTimer = this.randomWordStartTimer.bind(this);
+    this.randomWordGenerator = this.randomWordGenerator.bind(this);
   }
   componentDidMount() {
     recognition.stop();
@@ -106,7 +107,6 @@ class Game extends Component {
       event.preventDefault();
       console.log("Error occurred in recognition: " + event.error);
     };
-    // console.log(this.state.sentence);
   };
 
   handleSubmit(e) {
@@ -122,14 +122,15 @@ class Game extends Component {
     axios
       .get(CORS + MUSIX_API_ARTIST_INFO)
       .then((response) => {
-        // console.log(response.data.message.header.available);
         this.setState({
           track: response.data.message.body.track_list[0].track.track_name,
           artist: response.data.message.body.track_list[0].track.artist_name,
           album: response.data.message.body.track_list[0].track.album_name,
           url: response.data.message.body.track_list[0].track.track_share_url,
           trackID: response.data.message.body.track_list[0].track.track_id,
+          availableTracks: response.data.message.header.available,
         });
+        console.log(this.state.availableTracks);
         const MUSIX_API_SONG_LYRICS =
           MUSIX_API_ROOT +
           "track.lyrics.get?track_id=" +
@@ -142,7 +143,7 @@ class Game extends Component {
         this.setState({
           songLyrics: response.data.message.body.lyrics.lyrics_body,
         });
-        console.log(this.state.songLyrics)
+        console.log(this.state.songLyrics);
       })
       .catch((error) => {
         console.log(error);
@@ -156,12 +157,22 @@ class Game extends Component {
     document.getElementById("finalTranscript").innerHTML = finalTranscript = "";
   }
 
-  randomWordStartTimer(e) {
+  randomWordGenerator(e) {
     e.preventDefault();
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
+    // ??? match(), search(), includes() ???
+    // var str = this.state.sentence;
+    // var wordMatch = str.search(word);
+    // console.log(wordMatch);
   }
+
+  // wordCheck() {
+  //   var str = this.state.sentence;
+  //   var wordMatch = str.match(this.word);
+  //   console.log(wordMatch);
+  // }
 
   startTimer() {
     this.myInterval = setInterval(() => {
@@ -226,7 +237,8 @@ class Game extends Component {
               <Button
                 id="randomWordButton"
                 disabled={!this.state.clockRunning}
-                onClick={this.randomWordStartTimer}
+                // disabled={this.state.sentence.length <= 10}
+                onClick={this.randomWordGenerator}
               >
                 <div id="newWordText">New Word</div>
               </Button>
@@ -266,6 +278,8 @@ class Game extends Component {
                 <Button
                   id="submitButton"
                   type="submit"
+                  // if the length of this.state.sentence is too short button is disabled
+                  // disabled={this.state.sentence.length <= 33}
                   disabled={!this.state.lyrics}
                   value={this.state.sentence}
                   onClick={this.handleSubmit}
