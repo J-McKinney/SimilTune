@@ -162,18 +162,12 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
-    var str = this.state.sentence.toUpperCase();
-    var wordMatch = str.includes(word);
-    console.log(word)
+    var checkSentence = this.state.sentence.toUpperCase();
+    var wordMatch = checkSentence.includes(word);
+    console.log(word);
     console.log(wordMatch);
-    console.log(this.state.sentence)
+    console.log(this.state.sentence);
   }
-
-  // wordCheck() {
-  //   var str = this.state.sentence;
-  //   var wordMatch = str.match(this.word);
-  //   console.log(wordMatch);
-  // }
 
   startTimer() {
     this.myInterval = setInterval(() => {
