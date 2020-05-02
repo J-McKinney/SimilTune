@@ -228,7 +228,7 @@ class Game extends Component {
                 disabled={!this.state.clockRunning}
                 onClick={this.randomWordStartTimer}
               >
-                <div id="newWordText">New Word / Start Timer</div>
+                <div id="newWordText">New Word</div>
               </Button>
             </Row>
           </Container>
