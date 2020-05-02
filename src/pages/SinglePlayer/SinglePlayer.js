@@ -20,7 +20,7 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
-let randomWordArr = ["Love"];
+let randomWordArr = ["LOVE"];
 
 class Game extends Component {
   constructor(props) {
@@ -163,9 +163,11 @@ class Game extends Component {
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
     // ??? includes() ???
-    // var str = this.state.sentence;
-    // var wordMatch = str.search(word);
-    // console.log(wordMatch);
+    var str = this.state.sentence.toUpperCase();
+    var wordMatch = str.includes(word);
+    console.log(word)
+    console.log(wordMatch);
+    console.log(this.state.sentence)
   }
 
   // wordCheck() {
