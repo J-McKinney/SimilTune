@@ -162,7 +162,6 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     var word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
-    // ??? includes() ???
     var str = this.state.sentence.toUpperCase();
     var wordMatch = str.includes(word);
     console.log(word)
