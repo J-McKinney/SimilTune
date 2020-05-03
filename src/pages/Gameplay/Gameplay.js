@@ -11,23 +11,26 @@ class Gameplay extends Component {
     return (
       <>
         <div id="gameplayWrapper">
-          <Container>
-            <Row>
-              <Col>
+          <Container id="gameplayContainer">
+            <Row id="gameplayRow">
+              <Col id="gameplayCol">
                 <div id="gameplayTitle">How To Play:</div>
               </Col>
             </Row>
-          </Container>
-          <Container>
-            <Row>
-              <Col>
+            <Row id="gameplayParagraphRow">
+              <Col id="gameplayParagraphCol">
+                <p id="gameplayParagraph"></p>
+              </Col>
+            </Row>
+            <Row id="playerButtonRow">
+              <Col id="singleplayerButtonCol">
                 <Link to="/singleplayer">
-                  <Button>Single Player Game</Button>
+                  <Button id="singleplayerButton">Single Player Game</Button>
                 </Link>
               </Col>
-              <Col>
+              <Col id="multiplayerButtonCol">
                 <Link to="/multiplayer">
-                  <Button>Multi-Player Game</Button>
+                  <Button id="multiplayerButton">Multi-Player Game</Button>
                 </Link>
               </Col>
             </Row>

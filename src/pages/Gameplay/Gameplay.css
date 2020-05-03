@@ -13,9 +13,54 @@
   left: 0;
 }
 
+#gameplayContainer {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#gameplayRow {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#gameplayCol {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
 #gameplayTitle {
   color: white;
   font-size: 2rem;
   font-weight: bold;
   font-family: "Bangers", cursive;
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#gameplayParagraphRow {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#gameplayParagraphCol {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#gameplayParagraph {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#playerButtonRow {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#singleplayerButtonCol {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#singleplayerButton {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#multiplayerButtonCol {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#multiplayerButton {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
 }

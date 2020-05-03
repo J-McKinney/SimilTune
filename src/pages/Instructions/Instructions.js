@@ -28,7 +28,12 @@ class Instructions extends Component {
                   included in the lyrics. Press the red Record button again to
                   turn off the recording session. The green Submit button will
                   then become enabled, allowing the player to submit the song of
-                  their choice. Upon submit...
+                  their choice. Upon submit, the player will then see the song
+                  they chose to sing and the songs lyrics, if they are correct.
+                  Please speak clearly and loud enough into your microphone
+                  while recording. For accuracy, please sing at least 8 words.
+                  The more words matched to the lyrics, the more accurate of a
+                  result.
                 </p>
               </Col>
             </Row>
