@@ -11,25 +11,29 @@ class Instructions extends Component {
     return (
       <>
         <div id="instructionsWrapper">
-
-          <Container>
-            <Row>
-              <Col>
+          <Container id="instructionsTitleContainer">
+            <Row id="instructionsTitleRow">
+              <Col id="instructionsTitleCol">
                 <div id="instructionsTitle">Instructions:</div>
               </Col>
             </Row>
           </Container>
-
-          <Container>
-            <Row>
-              <Col>
+          <Container id="instructionsContainer">
+            <Row id="instructionsRow">
+              <Col id="instructionsCol">
+                <p id="instructionsParagraph">Hello</p>
+              </Col>
+            </Row>
+          </Container>
+          <Container id="homeButtonContainer">
+            <Row id="homeButtonRow">
+              <Col id="homeButtonCol">
                 <Link to="/">
-                  <Button>Home</Button>
+                  <Button id="homeButton">Home</Button>
                 </Link>
               </Col>
             </Row>
           </Container>
-          
         </div>
       </>
     );

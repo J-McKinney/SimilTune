@@ -5,6 +5,7 @@
   min-height: 100%;
   display: flex;
   flex-wrap: wrap;
+  /* flex-flow: row; */
   overflow: auto;
   box-sizing: border-box;
   justify-content: center;
@@ -13,9 +14,60 @@
   left: 0;
 }
 
+#instructionsTitleContainer {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#instructionsTitleRow {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#instructionsTitleCol {
+  width: fit-content;
+  height: fit-content;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
 #instructionsTitle {
+  width: fit-content;
+  height: fit-content;
   color: white;
   font-size: 2rem;
   font-weight: bold;
   font-family: "Bangers", cursive;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsContainer {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+}
+
+#instructionsRow {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsCol {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsParagraph {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#homeButtonContainer {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#homeButtonRow {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+#homeButtonCol {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+#homeButton {
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
