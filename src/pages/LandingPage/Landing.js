@@ -17,9 +17,8 @@ class Landing extends Component {
     this.Listening = this.Listening.bind(this);
   }
 
-  componentDidMount() {
-    // console.log();
-  }
+  componentDidMount() {}
+  
   componentDidUpdate() {
     audioContext.resume();
   }
