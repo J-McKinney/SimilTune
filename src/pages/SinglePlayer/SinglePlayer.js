@@ -58,7 +58,7 @@ class Game extends Component {
   componentDidUpdate() {}
 
   componentWillUnmount() {
-    // this.stopTimer();
+    this.stopTimer();
   }
 
   handleChange = (event) => {
