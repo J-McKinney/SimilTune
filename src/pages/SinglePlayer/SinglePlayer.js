@@ -41,8 +41,8 @@ class Game extends Component {
       availableTracks: "",
       songLyrics: "",
       clockRunning: false,
-      minutes: 0,
-      seconds: 10,
+      minutes: 3,
+      seconds: 0,
     };
 
     this.handleChange = this.handleChange.bind(this);
