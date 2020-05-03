@@ -20,6 +20,9 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://cors-anywhere.herokuapp.com/";
+var word;
+var checkSentence;
+var wordToMatch;
 let randomWordArr = ["LOVE"];
 
 class Game extends Component {
@@ -41,9 +44,9 @@ class Game extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.toggleListen = this.toggleListen.bind(this);
     this.handleListen = this.handleListen.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.randomWordGenerator = this.randomWordGenerator.bind(this);
   }
   componentDidMount() {
@@ -148,6 +151,7 @@ class Game extends Component {
       .catch((error) => {
         console.log(error);
       });
+    // this.matchRandomWord();
   }
 
   resetTranscripts(e) {
@@ -160,13 +164,16 @@ class Game extends Component {
   randomWordGenerator(e) {
     e.preventDefault();
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
-    var word = randomWordArr[randomWord];
+    word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
-    ////////////////////////////////////////////////////////////////////////////
-    var checkSentence = this.state.sentence.toUpperCase();
-    var wordMatch = checkSentence.includes(word);
+    this.matchRandomWord();
+  }
+
+  matchRandomWord() {
+    checkSentence = this.state.sentence.toUpperCase();
+    wordToMatch = checkSentence.includes(word);
     console.log(word);
-    console.log(wordMatch);
+    console.log(wordToMatch);
     console.log(this.state.sentence);
   }
 
