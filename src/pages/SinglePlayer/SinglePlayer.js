@@ -23,7 +23,7 @@ const CORS = "https://cors-anywhere.herokuapp.com/";
 var word;
 var checkSentence;
 var wordToMatch;
-let randomWordArr = ["LOVE","INCREDIBLE","NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANCE","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","FIRE","BEST","LOST","TROUBLE","BURN","WAR","STAY","SLOW","RING","CREAM","CARE","HAVE","NEED","HOLD","GOD","TOGETHER","IMAGINE","FREEDOM","FALL","THINK","BROKEN","SIDE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","TIME","CONTROL","BLANK","LIAR","BREATHE","READY","INSIDE","EYE","DEAD","BLAME","BLOOD","PROUD","MAD","CLOSE","LAST","MAN","YOUNG","STYLE","ALONE","RAIN","QUIT","FRIEND","SPACE","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"];
+let randomWordArr = ["REMEMBER"];
 
 class Game extends Component {
   constructor(props) {
@@ -39,8 +39,8 @@ class Game extends Component {
       availableTracks: "",
       songLyrics: "",
       clockRunning: false,
-      minutes: 20,
-      seconds: 0,
+      minutes: 0,
+      seconds: 10,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -160,7 +160,6 @@ class Game extends Component {
     } else {
       console.log("The word needs to be in the lyrics you just sang.");
     }
-    // this.matchRandomWord();
   }
 
   resetTranscripts(e) {
