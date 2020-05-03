@@ -23,7 +23,7 @@ const CORS = "https://cors-anywhere.herokuapp.com/";
 var word;
 var checkSentence;
 var wordToMatch;
-let randomWordArr = ["LOVE"];
+let randomWordArr = ["LOVE","INCREDIBLE","NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANCE","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","FIRE","BEST","LOST","TROUBLE","BURN","WAR","STAY","SLOW","RING","CREAM","CARE","HAVE","NEED","HOLD","GOD","TOGETHER","IMAGINE","FREEDOM","FALL","THINK","BROKEN","SIDE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","TIME","CONTROL","BLANK","LIAR","BREATHE","READY","INSIDE","EYE","DEAD","BLAME","BLOOD","PROUD","MAD","CLOSE","LAST","MAN","YOUNG","STYLE","ALONE","RAIN","QUIT","FRIEND","SPACE","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"];
 
 class Game extends Component {
   constructor(props) {
@@ -136,6 +136,9 @@ class Game extends Component {
             trackID: response.data.message.body.track_list[0].track.track_id,
             availableTracks: response.data.message.header.available,
           });
+          console.log(this.state.track);
+          console.log(this.state.artist);
+          console.log(this.state.album);
           console.log(this.state.availableTracks);
           const MUSIX_API_SONG_LYRICS =
             MUSIX_API_ROOT +
@@ -155,7 +158,7 @@ class Game extends Component {
           console.log(error);
         });
     } else {
-      console.log("Nope, not working!!!!");
+      console.log("The word needs to be in the lyrics you just sang.");
     }
     // this.matchRandomWord();
   }
