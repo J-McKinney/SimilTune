@@ -14,22 +14,28 @@ class Instructions extends Component {
           <Container id="instructionsTitleContainer">
             <Row id="instructionsTitleRow">
               <Col id="instructionsTitleCol">
-                <div id="instructionsTitle">Instructions:</div>
+                <div id="instructionsPageTitle">Instructions:</div>
               </Col>
             </Row>
-          </Container>
-          <Container id="instructionsContainer">
             <Row id="instructionsRow">
               <Col id="instructionsCol">
-                <p id="instructionsParagraph">Hello</p>
+                <p id="instructionsParagraph">
+                  The game begins immediately when the Start button is pressed.
+                  When the screen loads, press the New Word button to see a
+                  random word. Think of a song that has that random word in its
+                  lyrics. Press the red Record button to start recording. While
+                  the game is recording, sing the song that has the random word
+                  included in the lyrics. Press the red Record button again to
+                  turn off the recording session. The green Submit button will
+                  then become enabled, allowing the player to submit the song of
+                  their choice. Upon submit...
+                </p>
               </Col>
             </Row>
-          </Container>
-          <Container id="homeButtonContainer">
             <Row id="homeButtonRow">
               <Col id="homeButtonCol">
                 <Link to="/">
-                  <Button id="homeButton">Home</Button>
+                  <Button id="homeButton">Back</Button>
                 </Link>
               </Col>
             </Row>

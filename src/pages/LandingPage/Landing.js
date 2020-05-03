@@ -45,7 +45,7 @@ class Landing extends Component {
           </Container>
           <Container id="infoContainer">
             <Row id="infoRow">
-              <Col id="instructionsCol">
+              <Col id="infoCol">
                 <Link to="/instructions">
                   <Button id="instructionsButton">Instructions</Button>
                 </Link>

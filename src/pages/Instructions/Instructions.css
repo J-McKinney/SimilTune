@@ -5,36 +5,45 @@
   min-height: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* flex-flow: row; */
   overflow: auto;
   box-sizing: border-box;
   justify-content: center;
+  text-align: center;
   position: fixed;
   top: 0;
   left: 0;
 }
 
 #instructionsTitleContainer {
-  width: fit-content;
   height: fit-content;
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
-}
-
-#instructionsTitleRow {
-  width: fit-content;
-  height: fit-content;
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
-}
-
-#instructionsTitleCol {
-  width: fit-content;
-  height: fit-content;
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
-#instructionsTitle {
-  width: fit-content;
-  height: fit-content;
+#instructionsTitleRow {
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsTitleCol {
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#instructionsPageTitle {
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -42,32 +51,48 @@
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
-#instructionsContainer {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
-}
-
 #instructionsRow {
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 0 2%;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #instructionsCol {
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 2% 2%;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #instructionsParagraph {
-  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
-}
-
-#homeButtonContainer {
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 0 0;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #homeButtonRow {
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 0 2%;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 #homeButtonCol {
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 0 2%;
+  width: 100%;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 #homeButton {
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  margin: 2% 0 2% 0;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
