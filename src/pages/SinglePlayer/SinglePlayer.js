@@ -138,7 +138,6 @@ class Game extends Component {
       axios
         .get(CORS + MUSIX_API_ARTIST_INFO)
         .then((response) => {
-          console.log(response)
           this.setState({
             track: response.data.message.body.track_list[0].track.track_name,
             artist: response.data.message.body.track_list[0].track.artist_name,
@@ -147,10 +146,10 @@ class Game extends Component {
             trackID: response.data.message.body.track_list[0].track.track_id,
             availableTracks: response.data.message.header.available,
           });
-          // console.log(this.state.track);
-          // console.log(this.state.artist);
-          // console.log(this.state.album);
-          // console.log(this.state.availableTracks);
+          console.log(this.state.track);
+          console.log(this.state.artist);
+          console.log(this.state.album);
+          console.log(this.state.availableTracks);
           const MUSIX_API_SONG_LYRICS =
             MUSIX_API_ROOT +
             "track.lyrics.get?track_id=" +
@@ -163,7 +162,7 @@ class Game extends Component {
           this.setState({
             songLyrics: response.data.message.body.lyrics.lyrics_body,
           });
-          console.log(response);
+          console.log(response.data.message.body.lyrics.lyrics_body)
         })
         .catch((error) => {
           console.log(error);
