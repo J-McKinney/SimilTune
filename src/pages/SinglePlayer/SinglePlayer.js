@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import API from "../../utils/API";
 import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -117,13 +116,6 @@ class Game extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    /////////////////////////////////////////////
-    // if (this.state.sentence) {
-    //   API.saveSentence({
-    //     sentence: this.state.sentence,
-    //   }).catch((err) => console.log(err));
-    // }
-    //////////////////////////////////////////////
     checkSentence = this.state.sentence.toUpperCase();
     wordToMatch = checkSentence.includes(word);
     if (wordToMatch === true) {
