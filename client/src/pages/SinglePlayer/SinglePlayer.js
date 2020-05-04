@@ -116,11 +116,13 @@ class Game extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    /////////////////////////////////////////////
     if (this.state.sentence) {
       API.saveSentence({
         sentence: this.state.sentence,
       }).catch((err) => console.log(err));
     }
+    //////////////////////////////////////////////
     checkSentence = this.state.sentence.toUpperCase();
     wordToMatch = checkSentence.includes(word);
     if (wordToMatch === true) {
