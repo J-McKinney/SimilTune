@@ -178,7 +178,6 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
-    console.log(process.env.REACT_APP_MM_KEY)
   }
 
   startTimer() {
