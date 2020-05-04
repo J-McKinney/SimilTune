@@ -126,7 +126,6 @@ class Game extends Component {
         // changing the &page_size=1 to any other number will add other tracks to the json list
         // changing &page=1 to any other number will add more info to single tracks on the json list
         "&page_size=1&page=1&s_track_rating=desc&apikey=" +
-        // "03b6aef760aae79c400fed78ed0398f8";
       process.env.REACT_APP_MM_KEY;
       axios
         .get(CORS + MUSIX_API_ARTIST_INFO)
@@ -150,7 +149,6 @@ class Game extends Component {
             this.state.trackID +
             "&apikey=" +
             process.env.REACT_APP_MM_KEY;
-            // "03b6aef760aae79c400fed78ed0398f8";
           return axios.get(CORS + MUSIX_API_SONG_LYRICS);
         })
         .then((response) => {
@@ -180,6 +178,7 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
+    console.log(process.env.REACT_APP_MM_KEY)
   }
 
   startTimer() {
