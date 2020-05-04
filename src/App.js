@@ -14,13 +14,13 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/gameplay" component={Gameplay} />
-        <Route exact path="/instructions" component={Instructions} />
-        <Route exact path="/license" component={License} />
-        <Route exact path="/singleplayer" component={SinglePlayer} />
-        <Route exact path="/multiplayer" component={MultiPlayer} />
-        <Route exact path="*" component={ErrorPage} />
+        <Route path="/" component={Landing} />
+        <Route path="/gameplay" component={Gameplay} />
+        <Route path="/instructions" component={Instructions} />
+        <Route path="/license" component={License} />
+        <Route path="/singleplayer" component={SinglePlayer} />
+        <Route path="/multiplayer" component={MultiPlayer} />
+        <Route path="*" component={ErrorPage} />
       </Switch>
     </Router>
   );
