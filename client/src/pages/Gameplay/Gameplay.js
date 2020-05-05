@@ -47,7 +47,7 @@ class Gameplay extends Component {
             <Row id="multiPlayerButtonRow">
               <Col id="multiplayerButtonCol">
                 <Link to="/multiplayer">
-                  <Button id="multiplayerButton">Multi-Player Game</Button>
+                  <Button id="multiplayerButton" disabled={true}>Multi-Player Game</Button>
                 </Link>
               </Col>
             </Row>
