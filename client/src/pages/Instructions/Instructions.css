@@ -70,7 +70,7 @@
   justify-content: center;
   margin: 0 0 0 0;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.8745rem;
   font-weight: bold;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
@@ -94,5 +94,12 @@
   font-weight: bold;
   width: 100%;
   margin: 2% 0 2% 0;
+  background-color: #0c7d86;
+  border-color: #53725e;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#homeButton:active {
+  transform: translateY(3px);
 }

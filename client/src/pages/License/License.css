@@ -13,9 +13,96 @@
   left: 0;
 }
 
+#licenseAgreementContainer {
+  height: fit-content;
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementRow {
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementCol {
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
 #licenseAgreement {
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 2% 2%;
+  color: white;
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-family: "Bangers", cursive;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementParagraphRow {
+  text-align: center;
+  justify-content: center;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementParagraphCol {
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementParagraph1 {
+  margin: 2% 2% 2% 2%;
   font-family: "Bangers", cursive;
   color: white;
-  font-size: 3rem;
+  font-size: 2.2643rem;
   font-weight: bold;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementParagraph2 {
+  margin: 2% 2% 2% 2%;
+  font-family: "Bangers", cursive;
+  color: white;
+  font-size: 2.6rem;
+  font-weight: bold;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementHomeButtonRow {
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementHomeButtonCol {
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementHomeButton {
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100%;
+  margin: 2% 0 2% 0;
+  padding: 2% 0 2% 0;
+  background-color: #0c7d86;
+  border-color: #53725e;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#licenseAgreementHomeButton:active {
+  transform: translateY(3px);
 }

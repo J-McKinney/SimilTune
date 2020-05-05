@@ -11,18 +11,22 @@ class License extends Component {
     return (
       <>
         <div id="licenseWrapper">
-          <Container>
-            <Row>
-              <Col>
+          <Container id="licenseAgreementContainer">
+            <Row id="licenseAgreementRow">
+              <Col id="licenseAgreementCol">
                 <div id="licenseAgreement">License Agreement:</div>
               </Col>
             </Row>
-          </Container>
-          <Container>
-            <Row>
-              <Col>
+            <Row id="licenseAgreementParagraphRow">
+              <Col id="licenseAgreementParagraphCol">
+                <p id="licenseAgreementParagraph1">Owner and Creater:</p>
+                <p id="licenseAgreementParagraph2">Jesse MᶜKinney</p>
+              </Col>
+            </Row>
+            <Row id="licenseAgreementHomeButtonRow">
+              <Col id="licenseAgreementHomeButtonCol">
                 <Link to="/">
-                  <Button>Home</Button>
+                  <Button id="licenseAgreementHomeButton">Back</Button>
                 </Link>
               </Col>
             </Row>
