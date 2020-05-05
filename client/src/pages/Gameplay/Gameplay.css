@@ -89,6 +89,9 @@
 
 #singleplayerButton {
   width: 100%;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
   margin: 2% 0 2% 0;
   color: #101f3e;
   background-color: #1ae69d;
@@ -118,6 +121,9 @@
 
 #multiplayerButton {
   width: 100%;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
   margin: 2% 0 2% 0;
   color: #101f3e;
   background-color: #0c7d86;
