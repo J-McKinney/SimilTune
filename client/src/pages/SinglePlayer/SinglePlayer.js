@@ -23,7 +23,6 @@ const CORS = "https://cors-anywhere.herokuapp.com/";
 var word;
 var checkSentence;
 var wordToMatch;
-// const API_KEY = process.env.REACT_APP_MM_KEY;
 let randomWordArr = [
   "TRUE", //,"NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","BEST","LOST","TROUBLE","BURN","WAR","SLOW","RING","CREAM","NEED","HOLD","GOD","TOGETHER","FREEDOM","FALL","THINK","BROKE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","CONTROL","BLANK","LIAR","READY","INSIDE","EYE","DEAD","BLOOD","PROUD","MAD","LAST","MAN","YOUNG","ALONE","RAIN","QUIT","FRIEND","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"
 ];
@@ -127,9 +126,7 @@ class Game extends Component {
         // changing the &page_size=1 to any other number will add other tracks to the json list
         // changing &page=1 to any other number will add more info to single tracks on the json list
         "&page_size=1&page=1&s_track_rating=desc&apikey=" +
-        // "03b6aef760aae79c400fed78ed0398f8";
         process.env.REACT_APP_MM_KEY;
-        // API_KEY;
       axios
         .get(CORS + MUSIX_API_ARTIST_INFO)
         .then((response) => {
@@ -151,9 +148,7 @@ class Game extends Component {
             "track.lyrics.get?track_id=" +
             this.state.trackID +
             "&apikey=" +
-            // "03b6aef760aae79c400fed78ed0398f8";
             process.env.REACT_APP_MM_KEY;
-            // API_KEY;
           return axios.get(CORS + MUSIX_API_SONG_LYRICS);
         })
         .then((response) => {
