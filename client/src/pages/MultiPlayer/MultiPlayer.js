@@ -11,18 +11,18 @@ class MultiPlayer extends Component {
     return (
       <>
         <div id="multiplayerWrapper">
-          <Container>
-            <Row>
-              <Col>
+          <Container id="multiplayerTitleContainer">
+            <Row id="multiplayerTitleRow">
+              <Col id="multiplayerTitleCol">
                 <div id="multiplayerTitle">Coming Soon!!!</div>
               </Col>
             </Row>
           </Container>
-          <Container>
-            <Row>
-              <Col>
+          <Container id="multiplayerHomeButtonContainer">
+            <Row id="multiplayerHomeButtonRow">
+              <Col id="multiplayerHomeButtonCol">
                 <Link to="/">
-                  <Button>Home</Button>
+                  <Button id="multiplayerTitleHomeButton">Back</Button>
                 </Link>
               </Col>
             </Row>
