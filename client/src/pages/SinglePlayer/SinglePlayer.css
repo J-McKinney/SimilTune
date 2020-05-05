@@ -29,10 +29,9 @@
 
 #exitButton {
   float: right;
-  /* margin: 0 0 0 0; */
   padding: 1.5% 1.5% 1% 1.5%;
   border-radius: 15px;
-  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
 }
 
 #exitButton:active {
@@ -74,6 +73,10 @@
   font-weight: bold;
   font-size: 3.6rem;
   margin: 3% 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#randomWordButtonContainer {
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 

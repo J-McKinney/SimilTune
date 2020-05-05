@@ -24,7 +24,7 @@ var word;
 var checkSentence;
 var wordToMatch;
 let randomWordArr = [
-  "TRUE",//,"NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","BEST","LOST","TROUBLE","BURN","WAR","SLOW","RING","CREAM","NEED","HOLD","GOD","TOGETHER","FREEDOM","FALL","THINK","BROKE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","CONTROL","BLANK","LIAR","READY","INSIDE","EYE","DEAD","BLOOD","PROUD","MAD","LAST","MAN","YOUNG","ALONE","RAIN","QUIT","FRIEND","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"
+  "TRUE"//,"NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","BEST","LOST","TROUBLE","BURN","WAR","SLOW","RING","CREAM","NEED","HOLD","GOD","TOGETHER","FREEDOM","FALL","THINK","BROKE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","CONTROL","BLANK","LIAR","READY","INSIDE","EYE","DEAD","BLOOD","PROUD","MAD","LAST","MAN","YOUNG","ALONE","RAIN","QUIT","FRIEND","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"
 ];
 
 class Game extends Component {
@@ -237,7 +237,7 @@ class Game extends Component {
               </Col>
             </Row>
           </Container>
-          <Container>
+          <Container id="randomWordButtonContainer">
             <Row id="randomWordButtonRow">
               {/* change onClick laptop/desktop to onTouchStart mobile */}
               <Button
