@@ -14,53 +14,118 @@
 }
 
 #gameplayContainer {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  height: fit-content;
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #gameplayRow {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #gameplayCol {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #gameplayTitle {
   color: white;
+  padding: 0 0 0 0;
+  margin: 2% 2% 0 2%;
   font-size: 2rem;
   font-weight: bold;
   font-family: "Bangers", cursive;
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #gameplayParagraphRow {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #gameplayParagraphCol {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #gameplayParagraph {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  margin: 0 0 0 0;
+  color: white;
+  font-size: 0.83rem;
+  font-weight: bold;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
-#playerButtonRow {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+#singlePlayerButtonRow {
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #singleplayerButtonCol {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #singleplayerButton {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  width: 100%;
+  margin: 2% 0 2% 0;
+  color: #101f3e;
+  background-color: #1ae69d;
+  border-color: #53725e;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#singleplayerButton:active {
+  transform: translateY(3px);
+}
+
+#multiPlayerButtonRow {
+  text-align: center;
+  justify-content: center;
+  margin: 0 2% 0 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #multiplayerButtonCol {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  margin: 2% 2% 2% 2%;
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
 #multiplayerButton {
-  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+  width: 100%;
+  margin: 2% 0 2% 0;
+  color: #101f3e;
+  background-color: #0c7d86;
+  border-color: #53725e;
+  box-shadow: 7px 7px 7px rgb(0, 0, 0);
+  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
+}
+
+#multiplayerButton:active {
+  transform: translateY(3px);
 }
