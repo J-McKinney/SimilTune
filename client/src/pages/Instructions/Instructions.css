@@ -15,6 +15,7 @@
 }
 
 #instructionsTitleContainer {
+  /* position: relative; */
   height: fit-content;
   text-align: center;
   justify-content: center;
@@ -76,6 +77,8 @@
 }
 
 #homeButtonRow {
+  position: fixed;
+  bottom: 20px;
   text-align: center;
   justify-content: center;
   margin: 0 2% 0 2%;

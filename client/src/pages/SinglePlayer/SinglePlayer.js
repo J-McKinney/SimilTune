@@ -24,7 +24,7 @@ var word;
 var checkSentence;
 var wordToMatch;
 let randomWordArr = [
-  "TRUE","NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","BEST","LOST","TROUBLE","BURN","WAR","SLOW","RING","CREAM","NEED","HOLD","GOD","TOGETHER","FREEDOM","FALL","THINK","BROKE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","CONTROL","BLANK","LIAR","READY","INSIDE","EYE","DEAD","BLOOD","PROUD","MAD","LAST","MAN","YOUNG","ALONE","RAIN","QUIT","FRIEND","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"
+  "TRUE", //,"NIGHT","SWEET","DREAM","WORK","PHONE","ONE","LATE","GOOD","FOREVER","RAINBOW","DANGER","QUEEN","HAIR","LIGHT","HEART","NAME","DEEP","AGAIN","WORLD","GIRL","BEST","LOST","TROUBLE","BURN","WAR","SLOW","RING","CREAM","NEED","HOLD","GOD","TOGETHER","FREEDOM","FALL","THINK","BROKE","MINE","BOY","NEVER","KISS","WINE","GIRL","BAD","HURT","REMEMBER","ONLY","PERFECT","WANT","CONTROL","BLANK","LIAR","READY","INSIDE","EYE","DEAD","BLOOD","PROUD","MAD","LAST","MAN","YOUNG","ALONE","RAIN","QUIT","FRIEND","LIGHT","SONG","LISTEN","FEEL","NEVER","HOME","JUMP","WILD","ANGEL","TOUCH","HEAD"
 ];
 
 class Game extends Component {
@@ -40,8 +40,9 @@ class Game extends Component {
       trackID: "",
       availableTracks: "",
       songLyrics: "",
+      randomWordColor: { color: "#ffffff" },
       clockRunning: false,
-      minutes: 3,
+      minutes: 30,
       seconds: 0,
     };
 
@@ -156,7 +157,7 @@ class Game extends Component {
           this.setState({
             songLyrics: response.data.message.body.lyrics.lyrics_body,
           });
-          console.log(response.data.message.body.lyrics.lyrics_body);
+          console.log(this.state.songLyrics);
         })
         .catch((error) => {
           console.log(error);
@@ -178,6 +179,15 @@ class Game extends Component {
     var randomWord = Math.floor(Math.random() * randomWordArr.length);
     word = randomWordArr[randomWord];
     document.getElementById("randomWordPlacement").innerHTML = word;
+    this.setState({
+      track: "",
+      artist: "",
+      album: "",
+      url: "",
+      trackID: "",
+      availableTracks: "",
+      songLyrics: "",
+    });
   }
 
   startTimer() {

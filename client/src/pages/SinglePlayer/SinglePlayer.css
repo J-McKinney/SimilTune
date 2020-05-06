@@ -67,7 +67,7 @@
 
 #randomWordPlacement {
   font-family: "Bangers", cursive;
-  color: white;
+  color: #ffffff;
   text-align: center;
   justify-content: center;
   font-weight: bold;
@@ -76,9 +76,9 @@
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
-#randomWordButtonContainer {
-  /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
-}
+/* #randomWordButtonContainer {
+  box-shadow: 7px 7px 7px 7px rgb(0, 0, 0);
+} */
 
 #randomWordButtonRow {
   margin: 2% 0 1% 0;

@@ -20,20 +20,16 @@ class Gameplay extends Component {
             <Row id="gameplayParagraphRow">
               <Col id="gameplayParagraphCol">
                 <p id="gameplayParagraph">
-                  The game begins immediately when the Start button is pressed.
-                  When the screen loads, press the New Word button to see a
-                  random word. Think of a song that has that random word in its
-                  lyrics. Press the red Record button to start recording. While
-                  the game is recording, sing the song that has the random word
-                  included in the lyrics. Press the red Record button again to
-                  turn off the recording session. The green Submit button will
-                  then become enabled, allowing the player to submit the song of
-                  their choice. Upon submit, the player will then see the song
-                  they chose to sing and the songs lyrics, if they are correct.
-                  Please speak clearly and loud enough into your microphone
-                  while recording. For accuracy, please sing at least 8 words.
-                  The more words matched to the lyrics, the more accurate of a
-                  result.
+                  You will have 3 minutes to match as many random words with
+                  song lyrics as you can. The random word must be included in
+                  the sentence you are singing. Press the red Record button to
+                  start recording. Speak clearly and loud enough for your
+                  microphone to record you. Then, press the Record button again
+                  to stop recording. The Submit button will then become enabled,
+                  allowing you to submit the song of your choice. The random
+                  word will turn green if it has a match or red if it doesn't.
+                  For accuracy, please sing at least 8 words or more. The more
+                  words matched to the lyrics, the more accurate of a result.
                 </p>
               </Col>
             </Row>
@@ -47,7 +43,9 @@ class Gameplay extends Component {
             <Row id="multiPlayerButtonRow">
               <Col id="multiplayerButtonCol">
                 <Link to="/multiplayer">
-                  <Button id="multiplayerButton" disabled={true}>Multi-Player Game</Button>
+                  <Button id="multiplayerButton" disabled={true}>
+                    Multi-Player Game
+                  </Button>
                 </Link>
               </Col>
             </Row>

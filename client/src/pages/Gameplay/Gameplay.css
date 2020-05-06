@@ -73,9 +73,10 @@
 }
 
 #singlePlayerButtonRow {
+  position: relative;
   text-align: center;
   justify-content: center;
-  margin: 0 2% 0 2%;
+  margin: 25% 2% 0 2%;
   /* box-shadow: 7px 7px 7px 7px rgb(0, 0, 0); */
 }
 
