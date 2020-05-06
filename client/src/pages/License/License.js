@@ -20,7 +20,7 @@ class License extends Component {
             <Row id="licenseAgreementParagraphRow">
               <Col id="licenseAgreementParagraphCol">
                 <p id="licenseAgreementParagraph1">Owner and Creater:</p>
-                <p id="licenseAgreementParagraph2">Jesse MᶜKinney</p>
+                <p id="licenseAgreementParagraph2">Jesse McKinney</p>
               </Col>
             </Row>
             <Row id="licenseAgreementHomeButtonRow">
