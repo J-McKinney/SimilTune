@@ -20,6 +20,8 @@ let finalTranscript = "";
 let interimTranscript = "";
 const MUSIX_API_ROOT = "https://api.musixmatch.com/ws/1.1/";
 const CORS = "https://corsanywhere.herokuapp.com/";
+// const CORS = "https://cors-anywhere.herokuapp.com/";
+// const CORS = "https://cors.bridged.cc/";
 var word;
 var checkSentence;
 var wordToMatch;
