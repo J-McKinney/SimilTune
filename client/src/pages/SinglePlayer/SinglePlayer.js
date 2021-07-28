@@ -12,6 +12,19 @@ var SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// var AudioContext = window.AudioContext || window.webkitAudioContext;
+// var audioContext = new AudioContext();
+// var SpeechGrammarList =
+//   window.SpeechGrammarList || window.webkitSpeechGrammarList;
+
+// var SpeechRecognitionEvent =
+//   window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent;
+// var speechRecognitionList = new SpeechGrammarList();
+// speechRecognitionList.addFromString(grammar, 1);
+// recognition.grammars = speechRecognitionList;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 recognition.continous = true;
 recognition.maxAlternatives = 10;
 recognition.interimResults = true;
@@ -109,6 +122,7 @@ class Game extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      listening: true,
       sentence: "",
       lyrics: "",
       track: "",
@@ -120,7 +134,7 @@ class Game extends Component {
       songLyrics: "",
       randomWordColor: { color: "#ffffff" },
       clockRunning: false,
-      minutes: 3,
+      minutes: 30,
       seconds: 0,
     };
 
@@ -134,11 +148,16 @@ class Game extends Component {
     recognition.stop();
     this.startTimer();
     this.setState({ clockRunning: true });
+    // var context = new AudioContext();
+    // context.resume();
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    console.log(this.state.sentence)
+  }
 
   componentWillUnmount() {
+    // recognition.stop();
     this.stopTimer();
   }
 
@@ -162,6 +181,7 @@ class Game extends Component {
   handleListen = () => {
     if (this.state.listening) {
       recognition.start();
+      // audioContext.start()
       recognition.onend = () => {
         recognition.start();
       };
@@ -177,9 +197,8 @@ class Game extends Component {
         if (event.results[i].isFinal) finalTranscript += transcript + " ";
         else interimTranscript += transcript;
       }
-      document.getElementById(
-        "interimTranscript"
-      ).innerHTML = interimTranscript;
+      document.getElementById("interimTranscript").innerHTML =
+        interimTranscript;
       document.getElementById("finalTranscript").innerHTML = finalTranscript;
       const transcriptArr = finalTranscript.split("  ");
       this.setState({ sentence: transcriptArr[0] });
